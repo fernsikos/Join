@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/about_help.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+
+</head>
+
+<body onload="init()">
+    <div class="main-container" id="mainContainer">
+        <div w3-include-html="./templates/navbar.html"></div>
+        <div class="about-help-container">
+            <div class="headline-container">
+                <h1>Help</h1>
+            </div>
+            <div class='impressum'>
+                <div class="note">
+                    <span>Join is a Kanban board. It gives you an overview of your current work situation and helps
+                        visualising the project flow in agile project management.</span> <br>
+                    <span><strong>This app was built as a training project at Developer Akademie. There is no security
+                            layer
+                            implemented. The app is not supposed to be used with real life data. Do not enter personal
+                            data.</strong>
+                    </span>
+                </div>
+                <h3>How to use JOIN</h3>
+                <h4>The board</h4>
+                <ul>
+                    <li>On the board every task has to pass trough 4 stages</li>
+                    <li>The tasks can be moved by drag an drop</li>
+                    <li>On touch-screens open a task by clicking on it and click on the arrows to pass the task to the
+                        previous or next stage</li>
+                    <li>If a task has reached the stage "DONE" it can be deledet</li>
+                    <li>The color indicates a task by it's urgency from low over Intermediate to high (blue, yellow,
+                        red)</li>
+                    <li>By clicking on a task you can see the details of it</li>
+                    <img src="img/htu_board.png" alt="" class="help-img">
+                </ul>
+                <h4>The backlog</h4>
+                <ul>
+                    <li>In the backlog all tasks are stored in a list to get an overview</li>
+                    <li>By clicking on a task you can see the details of it and by clicking on the arrows you can pass
+                        the task to the previous or next stage</li>
+                </ul>
+                <img src="img/htu_backlog.png" alt="" class="help-img">
+                <h4>Add a task</h4>
+                <ul>
+                    <li>Fill the form and choose the urgency and by whoom the task should be processed</li>
+                    <li>Click on "CREATE TASK" to confirm and create a new task</li>
+                </ul>
+                <img src="img/htu_addtask.png" alt="" class="help-img">
+            </div>
+        </div>
+        <script src="./scripts/includeHTML.js"></script>
+
+</body>
+
+</html>

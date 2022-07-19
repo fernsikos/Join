@@ -1,0 +1,371 @@
+.add-task-main-container {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.add-task-container-bg {
+    background-color: #F4F3FB;
+    width: 100%;
+    height: 30rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-task-container-left {
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 50px;
+    width: 50%;
+}
+
+.add-task-container-right {
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    width: 50%;
+}
+
+.input-fields {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #1E3190;
+    border-radius: 5px;
+}
+
+.input-field-discription {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    border: 1px solid #1E3190;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+}
+
+.input-field-headline {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1E3190;
+    font-weight: bold;
+}
+
+.button-add {
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+    height: 50px;
+    margin-right: 20px;
+    color: #1E3190;
+    border: 1px solid #1E3190;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 6px;
+    transition: all 0.2s ease-in;
+}
+
+.add-user-button {
+    animation: flashIn 200ms ease-in-out;
+    animation-fill-mode:backwards;
+    animation-iteration-count: 4;
+}
+
+input {
+    outline: none;
+}
+
+@keyframes flashIn {
+    from {
+        background-color: white;
+        color: #1E3190;
+    }
+
+    to {
+        background-color: #1E3190;
+        color: white;
+    }
+}
+
+.button-add:hover {
+    background-color: #1E3190;
+    color: white;
+}
+
+.button-cancel {
+    border: 0;
+    background-color: #F4F3FB;
+    border-radius: 5px;
+    height: 50px;
+    margin-right: 20px;
+    color: #1E3190;
+    border: 1px solid #1E3190;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 6px;
+    transition: all 0.2s ease-in;
+}
+
+.button-cancel:hover {
+    background-color: #1E3190;
+    color: white;
+}
+
+.button-create-task {
+    border: 0;
+    background-color: #1E3190;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    transition: all 0.2s ease-in;
+}
+
+.button-create-task:hover {
+    background-color: blue;
+}
+
+.buttons {
+    height: 28%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.border {
+    border: 1px solid lightgrey;
+}
+
+#user-icon {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+}
+
+#user-icon img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid #1E3190;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card-details-user {
+    min-height: 380px;
+    min-width: 680px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px -2px #787878;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 24px;
+    margin: 10px;
+}
+
+.close-button-container {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-button-container img {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.user-container-main {
+    width: 100%;
+}
+
+.user-container {
+    background-color: #F4F3FB;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    min-height: 82px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.user-container:hover {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.1);
+}
+
+.img-user-container {
+    width: 150px;
+}
+
+.user-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.assignee-user-name {
+    width: 200px;
+    font-weight: bold;
+}
+
+.user-inactive {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@media (max-width:1185px) {
+    /* .buttons {
+        font-size: 13px;
+    } */
+
+    #user-icon img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+/* @media (max-width:1070px) {
+    .buttons {
+        font-size: 11px;
+    }
+}
+
+@media (max-width:860px) {
+    .buttons {
+        font-size: 9px;
+    }
+}
+
+@media (max-width:765px) {
+    .buttons {
+        font-size: 8px;
+    }
+} */
+
+@media (max-width:700px) {
+    .add-task-container-bg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+
+    .add-task-container-left {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-task-container-right {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    .width-responsive {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        margin-top: 50px;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    /* .button_plus {
+        margin-left: 9%;
+        width: 50px;
+        height: 50px;
+        margin-top: 60px;
+    } */
+
+    .card-details-user {
+        min-width: 95% !important;
+    }
+
+    .user-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #user-icon {
+        width: 100%;
+    }
+
+    #user-icon img {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width:410px) {
+    #user-icon img {
+        height: 65px;
+        width: 65px;
+    }
+
+    .buttons {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:350px) {
+    #user-icon img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .buttons {
+        font-size: 11px;
+    }
+
+    .user-container {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:300px) {
+    .user-container {
+        font-size: 11px;
+    }
+
+    .buttons {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:280px) {
+    #user-icon img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .buttons {
+        font-size: 8px;
+    }
+}

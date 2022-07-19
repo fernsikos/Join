@@ -1,0 +1,450 @@
+body {
+    font-family: PT Sans,sans-serif !important;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+.urgent {
+border-left: 5px solid #FFABAB !important;
+}
+
+.medium {
+    border-left: 5px solid #FFF5BA !important;
+}
+
+.low {
+    border-left: 5px solid #6EB5FF !important;
+}
+
+.done {
+    border-left: 5px solid #AFF8DB !important;
+}
+
+.main-container {
+    display: flex;
+}
+
+.navbar {
+    padding: 50px 0 !important;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100vh;
+    position: fixed !important;
+    background-color: #1E3190;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+}
+
+.navbar-hr {
+    width: 90px;
+    margin-left: 30px;
+}
+
+.profil-img {
+    height: 50px;
+    border: solid 2px;
+}
+
+.single-nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+}
+
+.single-nav-item a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 15px 0;
+    padding-left: 35px;
+}
+
+.nav-items h5:hover {
+    color: #4e95fd;
+}
+
+.slected-nav-item {
+    width: 7px;
+    height: 25px;
+}
+
+.nav-link h5 {
+    margin-bottom: 0 !important;
+}
+
+/* mobile nav */
+.mobile-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #1E3190;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.burger-container {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+.burger-line {
+    height: 4px;
+    width: 25px;
+    border-radius: 2px;
+    margin: 3px 0;
+    background-color: white;
+}
+
+.show-navbar {
+    left: 0 !important;
+}
+
+.active {
+    background-color: #4e95fd;
+    color: white;
+}
+
+.headline-container {
+    margin: 45px;
+}
+
+.headline-container h1 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.join-phrase {
+    color: #1E3190;
+}
+
+/* Open Card Deatials Style */
+#card-details-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(244, 243, 251, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+.card-details-content {
+    min-height: 380px;
+    min-width: 680px;
+    background-color: #F4F3FB;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px -2px #787878;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    margin: 10px;
+}
+
+.card-details-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-details-button-container img {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.card-details-button-container span {
+    color: #1E3190;
+    margin-left: 8px;
+}
+
+.card-details-content-left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    padding-right: 24px;
+    border-right: 1px solid lightgray;
+}
+
+.card-details-content-left h2 {
+    margin-bottom: 30px;
+}
+
+.deadline-container {
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.deadline-container span {
+    margin-right: 44px;
+}
+
+.card-details-description {
+    width: 550px;
+}
+
+.assignee-container {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.assignee-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #B0B2B8;
+    margin-right: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.assignee-name {
+    font-weight: bold;
+}
+
+.assignee-email {
+    color: #1E3190;
+}
+
+/* loading animation */
+#loading-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+@media (min-width:1000px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        left: -150px;
+    }
+
+    .tasks-main-container {
+        margin-left: 5px !important;
+        margin-top: 50px;
+    }
+
+    .backlog-container {
+        margin-left: 0 !important;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:950px) {
+    .card-details-description {
+        width: unset;
+    }
+}
+
+@media (max-width:800px) {
+    .tasks-main-container {
+        flex-direction: column;
+    }
+
+    .tasks-list-container {
+        min-height: 308px;
+    }
+}
+
+@media (max-width:700px) {
+    .card-details-content {
+        flex-direction: column;
+        min-width: unset;
+    }
+
+    .card-details-content-left {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .card-details-content-right {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 24px;
+    }
+    
+    .card-details-button-container {
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .card-details-button-container img {
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width:450px) {
+    .tasks-left-container, .tasks-right-container {
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    .tasks-main-container {
+        height: unset !important;
+        margin-bottom: 32px;
+    }
+
+    .tasks-container {
+        width: unset !important;
+    }
+
+    .tasks-list-container {
+        margin-bottom: unset !important;
+    }
+}
+
+@media (max-width:350px) {
+    .assignee-container {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .assignee-container img {
+        margin-bottom: 8px;
+    }
+
+    .deadline-container span {
+        margin-right: 12px;
+    }
+
+    #card-details-container {
+        position: absolute;
+        bottom: unset;
+    }
+
+    .card-details-content {
+        margin-top: 70px;
+    }
+
+    #card-details-container {
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .backlog-head {
+        display: none !important;
+    }
+
+    .backlog-card {
+        flex-direction: column-reverse;
+    }
+
+    .task-description {
+        font-weight: bold;
+        margin-left: 12px;
+    }
+}
+
+/* fonts */
+/* pt-sans-regular - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/pt-sans-v17-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./fonts/pt-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('./fonts/pt-sans-v17-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/pt-sans-v17-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('./fonts/pt-sans-v17-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/pt-sans-v17-latin-regular.svg#PTSans') format('svg');
+    /* Legacy iOS */
+}
+
+/* pt-sans-italic - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/pt-sans-v17-latin-italic.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('./fonts/pt-sans-v17-latin-italic.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('./fonts/pt-sans-v17-latin-italic.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/pt-sans-v17-latin-italic.woff') format('woff'),
+        /* Modern Browsers */
+        url('./fonts/pt-sans-v17-latin-italic.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/pt-sans-v17-latin-italic.svg#PTSans') format('svg');
+    /* Legacy iOS */
+}

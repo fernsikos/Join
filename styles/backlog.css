@@ -1,0 +1,86 @@
+.backlog-container {
+    width: 100%;
+    margin-left: 150px;
+}
+
+.backlog-content-container {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.backlog-head {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    color: #1E3190;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.backlog-head div {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.backlog-head div:nth-child(even) {
+    flex: 1;
+}
+
+.backlog-head div:nth-child(odd) {
+    flex: 2;
+}
+
+.backlog-card {
+    background-color: #F4F3FB;
+    border-radius: 10px;
+    display: flex;
+    align-items: stretch;
+    min-height: 82px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+
+.backlog-card:hover {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.1) ; 
+}
+
+.task-asssignedment {
+    display: flex;
+    flex: 2;
+}
+
+.backlog-card-img-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 250px;
+}
+
+.backlog-card img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #B0B2B8;
+    margin-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.task-category {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+    margin-left: 12px;
+    flex: 1;
+    min-width: 100px;
+}
+
+.task-description {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 2;
+}

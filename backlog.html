@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backlog</title>
+
+    <script src="scripts/mini_backend.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/board.js"></script>
+    <script src="scripts/backlog.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/backlog.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body onload="initBacklog()">
+    <div class="main-container" id="mainContainer">
+        <div w3-include-html="./templates/navbar.html"></div>
+        <div class="backlog-container">
+            <div class="headline-container">
+                <h1>Backlog</h1>
+                <span class="join-phrase">Learning Management System Project</span>
+            </div>
+            <div class="backlog-content-container">
+                <div class="backlog-head">
+                    <div>Assingned To</div>
+                    <div>Category</div>
+                    <div>Title</div>
+                </div>
+                <div id="backlog-cards">
+                </div>
+                <div id="card-details-container" class="d-none fade-out" onclick="closeCardDetails()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/includeHTML.js"></script>
+</body>
+
+</html>

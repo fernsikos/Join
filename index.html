@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+
+    <script src="scripts/mini_backend.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/board.js"></script>
+    <script src="scripts/addTask.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/board.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body onload="initBoard()">
+    <div class="main-container" id="mainContainer">
+        <div w3-include-html="./templates/navbar.html"></div>
+        <div class="tasks-main-container">
+            <div class="tasks-left-container">
+                <div class="tasks-container">
+                    <div class="tasks-headline-container">
+                        TO DO
+                    </div>
+                    <div class="tasks-list-container" id="todo-list" ondrop="moveTo('todo')"
+                        ondragover="allowDrop(event); getId(this)">
+
+                    </div>
+                </div>
+                <div class="tasks-container">
+                    <div class="tasks-headline-container">
+                        IN PROGRESS
+                    </div>
+                    <div class="tasks-list-container" id="in-progress-list" ondrop="moveTo('in-progress')"
+                        ondragover="allowDrop(event); getId(this)">
+
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-right-container">
+                <div class="tasks-container">
+                    <div class="tasks-headline-container">
+                        TESTING
+                    </div>
+                    <div class="tasks-list-container" id="testing-list" ondrop="moveTo('testing')"
+                        ondragover="allowDrop(event); getId(this)">
+                    </div>
+                </div>
+                <div class="tasks-container">
+                    <div class="tasks-headline-container">
+                        DONE
+                    </div>
+                    <div class="tasks-list-container" id="done-list" ondrop="moveTo('done')"
+                        ondragover="allowDrop(event); getId(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="card-details-container" class="d-none fade-out primary" onclick="closeCardDetails()">
+        </div>
+    </div>
+    <script src="./scripts/includeHTML.js"></script>
+</body>
+
+</html>

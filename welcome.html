@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Join</title>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/welcome.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/welcome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="welcome-card">
+        <div class="welcome-card-left-container">
+            <img src="img/joinlogo.png" alt="">
+        </div>
+        <div class="welcome-card-right-container">
+            <h1>Welcome to Join</h1>
+            <div class="user-container">
+                <div class="width75">Username:</div>
+                <input type="text" id="user-name">
+            </div>
+            <div class="password-container">
+                <div class="width75">Password:</div>
+                <input type="password" id="user-password" onkeyup="enter()">
+            </div>
+            <span id="wrong-login-data-container" class="opacity-zero">insert wrong username or password</span>
+            <div class="button-container">
+                <button type="button" onclick="login()" id="login">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

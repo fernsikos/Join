@@ -1,0 +1,44 @@
+h3 {
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+h4 {
+    font-weight: 600 !important;
+}
+
+.about-help-container {
+    margin-left: 150px;
+    width: 100%;
+}
+
+.impressum {
+    background-color: #F4F3FB;
+    border-radius: 10px;
+    margin: 24px;
+    padding: 24px;
+}
+
+.note {
+    margin-bottom: 24px;
+}
+
+.help-img {
+    width: 100%;
+    border: solid 5px white;
+    margin: 10px 0 50px 0;
+}
+
+@media(max-width: 1000px) {
+
+    .about-help-container {
+        margin-left: 0 !important;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 800px) {
+    .help-img {
+        display: none;
+    }
+}
