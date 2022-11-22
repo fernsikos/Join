@@ -8,6 +8,11 @@ let userData = [
     }
 ]
 
+async function initWelcome() {
+    await downloadFromServer();
+    loadFromBackend();
+}
+
 
 /**
  * searches for insert login data in userData array

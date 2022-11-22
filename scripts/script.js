@@ -40,8 +40,8 @@ let employees = [
 /**
  * url for backend
  */
-setURL('https://gruppe-260.developerakademie.net/smallest_backend_ever-master');
-
+setURL('https://tobias-fernkorn.developerakademie.net/smallest_backend_ever-master');
+// tobias-fernkorn.developerakademie.net/smallest_backend_ever-master
 
 /**
  * initial load function
@@ -243,7 +243,7 @@ function toggleNavbar() {
 
 
 /**
- * save to LocalStorage
+ * save to Backend
  */
 async function saveToBackend() {
     let tasksToDosAsText = JSON.stringify(tasksToDos);
@@ -252,7 +252,7 @@ async function saveToBackend() {
 
 
 /**
- * load from LocalStorage
+ * load from Backend
  */
 function loadFromBackend() {
     let tasksToDosAsText = backend.getItem('tasksToDos');
