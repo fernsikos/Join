@@ -9,8 +9,20 @@ let userData = [
 ]
 
 async function initWelcome() {
+    console.log('1')
     await downloadFromServer();
-    loadFromBackend();
+    console.log('2')
+    saveUserToBackend();
+    console.log('3')
+}
+
+/**
+ * save to Backend
+ */
+ async function saveUserToBackend() {
+    let userDataAsText = JSON.stringify(userData);
+   await backend.setItem('userData', userDataAsText);
+//    console.log('saved')
 }
 
 
