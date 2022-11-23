@@ -2,27 +2,31 @@
  * array with valid user data
  */
 let userData = [
-    {
-        'username': 'admin',
-        'password': 'admin'
-    }
 ]
 
 async function initWelcome() {
-    console.log('1')
     await downloadFromServer();
-    console.log('2')
-    saveUserToBackend();
-    console.log('3')
+    // saveUserToBackend();
+    loadUsersFromBackend();
 }
 
 /**
  * save to Backend
  */
- async function saveUserToBackend() {
+async function saveUserToBackend() {
     let userDataAsText = JSON.stringify(userData);
-   await backend.setItem('userData', userDataAsText);
-//    console.log('saved')
+    await backend.setItem('userData', userDataAsText);
+    //    console.log('saved')
+}
+
+/**
+ * load from Backend
+ */
+function loadUsersFromBackend() {
+    let userDataAsText = backend.getItem('userData');
+    if (userDataAsText) {
+        userData = JSON.parse(userDataAsText);
+    }
 }
 
 
@@ -32,7 +36,7 @@ async function initWelcome() {
 function login() {
     let userNameInUserdata = false;
     let passwordInUserData = false;
-    let userNameInput = document.getElementById('user-name').value.toLowerCase() ;
+    let userNameInput = document.getElementById('user-name').value.toLowerCase();
     let passwordInput = document.getElementById('user-password').value;
     for (let i = 0; i < userData.length; i++) {
         const user = userData[i];
@@ -61,15 +65,60 @@ function checkIfLoginDataValid(userNameInUserdata, passwordInUserData) {
     }
 }
 
-
 /**
  * runs login function on keypress enter
  */
 function enter() {
     let input = document.getElementById('user-password');
-    input.addEventListener("keydown", function(event) {
+    input.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             login()
         }
     });
+}
+
+function createNewAccount() {
+    let userNameInput = document.getElementById('new-user-name').value.toLowerCase();
+    let passwordInput = document.getElementById('new-user-password').value;
+    let newAccount = {
+        'username': userNameInput,
+        'password': passwordInput
+    };
+    userData.push(newAccount);
+    saveUserToBackend();
+    window.location.replace('./index.html')
+}
+
+/**
+ * toggles between login and signup card
+ */
+function toggleLogin() {
+    document.getElementById('login-card').classList.toggle('d-none');
+    document.getElementById('signup-card').classList.toggle('d-none');
+    clearInput();
+    clearUserData();
+    console.log(userData)
+}
+
+/**
+ * clears user inputs after toggle
+ */
+function clearInput() {
+    document.getElementById('user-name').value = "";
+    document.getElementById('user-password').value = "";
+    document.getElementById('new-user-name').value = "";
+    document.getElementById('new-user-password').value = "";
+
+}
+
+//For developer purpose only
+
+function clearUserData() {
+    userData = [
+        {
+            'username': 'admin',
+            'password': 'admin'
+        }
+    ];
+    saveUserToBackend()
 }
