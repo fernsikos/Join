@@ -2,7 +2,11 @@
  * array with valid user data
  */
 let userData = [
-]
+    // {
+    //     'username': 'admin',
+    //     'password': 'admin'
+    // }
+];
 
 async function initWelcome() {
     await downloadFromServer();
@@ -77,15 +81,31 @@ function enter() {
     });
 }
 
-function createNewAccount() {
+/**
+ * validate lenght of name and password and creates account
+ */
+async function createNewAccount() {
     let userNameInput = document.getElementById('new-user-name').value.toLowerCase();
     let passwordInput = document.getElementById('new-user-password').value;
+
+    if(userNameInput.length < 5) {
+        document.getElementById('wrong-data-container').innerText = 'please insert a name longer then 4 characters';
+    } else if (passwordInput.length < 6) {
+        document.getElementById('wrong-data-container').innerText = 'please choose a password longer then 5 characters';
+    } else {
+        createAccount(userNameInput, passwordInput)
+    }
+}
+
+async function createAccount(userNameInput, passwordInput) {
     let newAccount = {
         'username': userNameInput,
         'password': passwordInput
     };
     userData.push(newAccount);
-    saveUserToBackend();
+    console.log(userData);
+    showLoadingAnimation();
+    await saveUserToBackend();
     window.location.replace('./index.html')
 }
 
@@ -97,7 +117,6 @@ function toggleLogin() {
     document.getElementById('signup-card').classList.toggle('d-none');
     clearInput();
     clearUserData();
-    console.log(userData)
 }
 
 /**
@@ -108,11 +127,16 @@ function clearInput() {
     document.getElementById('user-password').value = "";
     document.getElementById('new-user-name').value = "";
     document.getElementById('new-user-password').value = "";
+    document.getElementById('wrong-login-data-container').classList.add('opacity-zero');
+    document.getElementById('wrong-data-container').innerText = '';
 
 }
 
 //For developer purpose only
 
+/**
+ * clears all user data and leaves admin login
+ */
 function clearUserData() {
     userData = [
         {

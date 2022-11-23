@@ -107,7 +107,7 @@ function openUsersCard() {
  */
 function showUsers() {
     let showUsers = document.getElementById('card-details-users');
-
+    showUsers.innerHTML = '';
     for (let u = 0; u < employees.length; u++) {
         const employee = employees[u];
         let userAlreadySelected = checkIfUserAlreadySelected(employee);
@@ -151,7 +151,7 @@ function removeUser(u) {
             break
         }
     }
-    closeCardDetails();
+    showUsers();
     showUsersOnAddTask();
 }
 
@@ -167,8 +167,9 @@ function chooseTheUser(u) {
         'email': employees[u]['email'],
         'img': employees[u]['img']
     })
-    closeCardDetails();
+    // closeCardDetails();
     showUsersOnAddTask();
+    showUsers();
 }
 
 

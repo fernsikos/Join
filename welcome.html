@@ -9,6 +9,7 @@
     <script src="scripts/mini_backend.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/welcome.js"></script>
+    <script src="scripts/addTask.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/welcome.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -52,15 +53,18 @@
             </div>
             <div class="password-container">
                 <div class="width75">Password:</div>
-                <input type="password" id="new-user-password" onkeyup="enter()" minlength="3">
+                <input type="password" id="new-user-password" onkeyup="enter()" pattern=".{3}" required>
             </div>
-            <span id="wrong-login-data-container" class="opacity-zero">insert wrong username or password</span>
+            <span id="wrong-data-container"></span>
             <div class="button-container">
                 <button type="button" onclick="toggleLogin()" class="method-toggle">Login</button>
                 <button type="button" onclick="createNewAccount()" id="login">Create Account</button>
             </div>
         </div>
     </div>
+    <div class="d-none" id="loading-container">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>  
+      </div>
 </body>
 
 </html>
