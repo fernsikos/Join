@@ -25,27 +25,54 @@ function setCurrentDateToInputField() {
 
 
 /**
- * creates a new task
+ * checks if choosed employees
  */
-async function createNewTask() { // creat task button
+async function createNewTask() { // create task button
+    if (choosedUsers.length === 0) {
+        flashAddUserButton();
+    } else {
+        createTheTask();
+    }
+}
+
+/**
+ * creates the task
+ */
+async function createTheTask() {
     let titles = document.getElementById('input-field-title').value;
     let dueDates = document.getElementById('input-field-date').value;
     let categorys = document.getElementById('input-field-category').value;
     let descriptions = document.getElementById('input-field-description').value;
     let urgencys = document.getElementById('input-field-urgency').value;
     let date = new Date().toDateString();
-    if (choosedUsers.length === 0) {
-        document.getElementById('add-user-button').classList.toggle('add-user-button')
-        console.log(choosedUsers);
-    } else {
-        pushTaskInArray(titles, dueDates, categorys, descriptions, urgencys, date);
+    pushTaskInArray(titles, dueDates, categorys, descriptions, urgencys, date);
         showLoadingAnimation();
         await saveToBackend();
-        window.close();
-        window.open("index.html");
-    }
+        clearInputFields();
+        stopLoadingAnimation();
 }
 
+/**
+ * flases the add user button
+ */
+function flashAddUserButton() {
+    document.getElementById('add-user-button').classList.toggle('add-user-button')
+}
+
+/**
+ * stops loading animation and opens index.html
+ */
+function stopLoadingAnimation() {
+    document.getElementById('loading-ring').classList.add('d-none')
+    document.getElementById('tick').classList.remove('d-none');
+    setTimeout(() => {
+        document.getElementById('loading-ring').classList.remove('d-none')
+        document.getElementById('tick').classList.add('d-none');
+        document.getElementById('loading-container').classList.add('d-none');
+        window.close();
+        window.open("index.html");
+    }, 1000);
+}
 
 /**
  * shows loading animation
@@ -96,7 +123,6 @@ function pushTaskInArray(titles, dueDates, categorys, descriptions, urgencys, da
 function openUsersCard() {
     fadeIn();
     let openCard = document.getElementById('card-details-container');
-
     openCard.innerHTML = openUsersCardHTML();
     showUsers();
 }
@@ -167,7 +193,6 @@ function chooseTheUser(u) {
         'email': employees[u]['email'],
         'img': employees[u]['img']
     })
-    // closeCardDetails();
     showUsersOnAddTask();
     showUsers();
 }

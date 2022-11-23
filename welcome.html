@@ -19,6 +19,7 @@
 </head>
 
 <body onload="initWelcome()">
+    <img src="img/background.jpg" alt="" class="background-image">
     <div class="welcome-card" id="login-card">
         <div class="welcome-card-left-container">
             <img src="img/joinlogo.png" alt="">
@@ -31,7 +32,7 @@
             </div>
             <div class="password-container">
                 <div class="width75">Password:</div>
-                <input type="password" id="user-password" onkeyup="enter()">
+                <input type="password" id="user-password" onkeyup="enter('user-password')">
             </div>
             <span id="wrong-login-data-container" class="opacity-zero">insert wrong username or password</span>
             <div class="button-container">
@@ -53,7 +54,7 @@
             </div>
             <div class="password-container">
                 <div class="width75">Password:</div>
-                <input type="password" id="new-user-password" onkeyup="enter()" pattern=".{3}" required>
+                <input type="password" id="new-user-password" onkeyup="enter('new-user-password')">
             </div>
             <span id="wrong-data-container"></span>
             <div class="button-container">

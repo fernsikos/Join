@@ -72,17 +72,21 @@ function checkIfLoginDataValid(userNameInUserdata, passwordInUserData) {
 /**
  * runs login function on keypress enter
  */
-function enter() {
-    let input = document.getElementById('user-password');
+function enter(id) {
+    let input = document.getElementById(id);
     input.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-            login()
+            if(id === 'user-password') {
+                login()
+            } else {
+                createNewAccount()
+            }
         }
     });
 }
 
 /**
- * validate lenght of name and password and creates account
+ * validate lenght of name and password
  */
 async function createNewAccount() {
     let userNameInput = document.getElementById('new-user-name').value.toLowerCase();
@@ -90,13 +94,33 @@ async function createNewAccount() {
 
     if(userNameInput.length < 5) {
         document.getElementById('wrong-data-container').innerText = 'please insert a name longer then 4 characters';
-    } else if (passwordInput.length < 6) {
+    } else if (passwordInput.length < 5) {
         document.getElementById('wrong-data-container').innerText = 'please choose a password longer then 5 characters';
     } else {
-        createAccount(userNameInput, passwordInput)
+        checkIfUsernmeFree(userNameInput, passwordInput)
     }
 }
 
+/**
+ * checkes if username is available
+ * @param {string} userNameInput the username input
+ * @param {string} passwordInput the password input
+ */
+function checkIfUsernmeFree(userNameInput, passwordInput) {
+    for (let i = 0; i < userData.length; i++) {
+        if (userData[i].username === userNameInput) {
+            document.getElementById('wrong-data-container').innerText = 'Username already existing. Please use a differet username';
+        } else {
+            createAccount(userNameInput, passwordInput)
+        }
+    }
+}
+
+/**
+ * creates the account
+ * @param {string} userNameInput the password input
+ * @param {string} passwordInput the password input
+ */
 async function createAccount(userNameInput, passwordInput) {
     let newAccount = {
         'username': userNameInput,

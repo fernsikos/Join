@@ -41,7 +41,6 @@ let employees = [
  * url for backend
  */
 setURL('https://tobias-fernkorn.developerakademie.net/smallest_backend_ever-master');
-// tobias-fernkorn.developerakademie.net/smallest_backend_ever-master
 
 /**
  * initial load function

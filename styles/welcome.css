@@ -5,6 +5,15 @@ body {
     align-items: center;
 }
 
+.background-image {
+    position: absolute;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    opacity: 0.6;
+}
+
 input {
     outline: none;
 }
@@ -22,6 +31,7 @@ input {
     box-shadow: 0 0 13px rgb(0 0 0 / 10%);
     display: flex;
     margin: 15px;
+    z-index: 2;
 }
 
 .welcome-card-left-container {
@@ -74,7 +84,7 @@ input {
     height: 30px;
 }
 
-#wrong-login-data-container,#wrong-data-container {
+#wrong-login-data-container, #wrong-data-container {
     font-size: 10px !important;
     padding-left: 70px;
     font-style: italic;
@@ -115,7 +125,7 @@ input {
 }
 
 .method-toggle {
-    background-color: #a0a0a0 !important;
+    background-color: #B01616 !important;
     margin-right: 28px !important;
 }
 

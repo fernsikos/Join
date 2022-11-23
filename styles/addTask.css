@@ -69,7 +69,7 @@
 
 .add-user-button {
     animation: flashIn 200ms ease-in-out;
-    animation-fill-mode:backwards;
+    animation-fill-mode: backwards;
     animation-iteration-count: 4;
 }
 
@@ -229,34 +229,24 @@ input {
     cursor: pointer;
 }
 
-@media (max-width:1185px) {
-    /* .buttons {
-        font-size: 13px;
-    } */
+.tick {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+}
 
+@media (max-width:1185px) {
     #user-icon img {
         height: 60px;
         width: 60px;
     }
 }
 
-/* @media (max-width:1070px) {
-    .buttons {
-        font-size: 11px;
-    }
-}
-
-@media (max-width:860px) {
-    .buttons {
-        font-size: 9px;
-    }
-}
-
-@media (max-width:765px) {
-    .buttons {
-        font-size: 8px;
-    }
-} */
 
 @media (max-width:700px) {
     .add-task-container-bg {
@@ -294,13 +284,6 @@ input {
         margin-bottom: 15px;
         font-size: 16px;
     }
-
-    /* .button_plus {
-        margin-left: 9%;
-        width: 50px;
-        height: 50px;
-        margin-top: 60px;
-    } */
 
     .card-details-user {
         min-width: 95% !important;
