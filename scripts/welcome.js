@@ -140,7 +140,7 @@ function toggleLogin() {
     document.getElementById('login-card').classList.toggle('d-none');
     document.getElementById('signup-card').classList.toggle('d-none');
     clearInput();
-    clearUserData();
+    // clearUserData();
 }
 
 /**

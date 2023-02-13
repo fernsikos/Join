@@ -1,5 +1,5 @@
 body {
-    font-family: PT Sans,sans-serif !important;
+    font-family: PT Sans, sans-serif !important;
 }
 
 .fade-out {
@@ -8,7 +8,7 @@ body {
 }
 
 .urgent {
-border-left: 5px solid #FFABAB !important;
+    border-left: 5px solid #FFABAB !important;
 }
 
 .medium {
@@ -34,7 +34,8 @@ border-left: 5px solid #FFABAB !important;
     width: 150px;
     height: 100vh;
     position: fixed !important;
-    background-color: #1E3190;
+    /* background-color: #1E3190; */
+    background-color: #171e41;
     left: 0;
     transition: left 0.5s ease-in-out;
 }
@@ -86,7 +87,7 @@ border-left: 5px solid #FFABAB !important;
     top: 0;
     width: 100vw;
     height: 50px;
-    background-color: #1E3190;
+    background-color: #212b5e;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -126,7 +127,7 @@ border-left: 5px solid #FFABAB !important;
 }
 
 .join-phrase {
-    color: #1E3190;
+    color: #212b5e;
 }
 
 /* Open Card Deatials Style */
@@ -171,7 +172,7 @@ border-left: 5px solid #FFABAB !important;
 }
 
 .card-details-button-container span {
-    color: #1E3190;
+    color: #212b5e;
     margin-left: 8px;
 }
 
@@ -219,8 +220,8 @@ border-left: 5px solid #FFABAB !important;
     font-weight: bold;
 }
 
-.assignee-email {
-    color: #1E3190;
+.assignee-email > a {
+    color: #2a387b;
 }
 
 /* loading animation */
@@ -243,45 +244,61 @@ border-left: 5px solid #FFABAB !important;
     bottom: 0;
     left: 0;
     right: 0;
-  }
-  .lds-ring div {
+}
+
+.lds-ring div {
     box-sizing: border-box;
     display: block;
     position: absolute;
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #1E3190;
+    border: 8px solid #212b5e;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #1E3190 transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
+    border-color: #212b5e transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
+}
+
+.lds-ring div:nth-child(2) {
     animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
+}
+
+.lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
+}
+
+#loading-ring,#tick {
+    margin-left: 150px;
+}
+
+@keyframes lds-ring {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
+}
+
 
 @media (min-width:1000px) {
     .mobile-nav {
         display: none;
     }
+
+
 }
 
 @media (max-width: 1000px) {
+    #loading-ring,#tick {
+        margin-left: 0 !important;
+    }
+
     .navbar {
         left: -150px;
     }
@@ -314,6 +331,11 @@ border-left: 5px solid #FFABAB !important;
 }
 
 @media (max-width:700px) {
+
+    #loading-container {
+        top: 250px;
+    }
+
     .card-details-content {
         flex-direction: column;
         min-width: unset;
@@ -332,7 +354,7 @@ border-left: 5px solid #FFABAB !important;
         flex-direction: column-reverse;
         margin-top: 24px;
     }
-    
+
     .card-details-button-container {
         align-items: flex-end;
         margin-top: 10px;
@@ -418,15 +440,15 @@ border-left: 5px solid #FFABAB !important;
     src: url('./fonts/pt-sans-v17-latin-regular.eot');
     /* IE9 Compat Modes */
     src: local(''),
-        url('./fonts/pt-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/pt-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('./fonts/pt-sans-v17-latin-regular.woff2') format('woff2'),
+        url('/fonts/pt-sans-v17-latin-regular.woff2') format('woff2'),
         /* Super Modern Browsers */
-        url('./fonts/pt-sans-v17-latin-regular.woff') format('woff'),
+        url('/fonts/pt-sans-v17-latin-regular.woff') format('woff'),
         /* Modern Browsers */
-        url('./fonts/pt-sans-v17-latin-regular.ttf') format('truetype'),
+        url('/fonts/pt-sans-v17-latin-regular.ttf') format('truetype'),
         /* Safari, Android, iOS */
-        url('./fonts/pt-sans-v17-latin-regular.svg#PTSans') format('svg');
+        url('/fonts/pt-sans-v17-latin-regular.svg#PTSans') format('svg');
     /* Legacy iOS */
 }
 
@@ -438,14 +460,14 @@ border-left: 5px solid #FFABAB !important;
     src: url('./fonts/pt-sans-v17-latin-italic.eot');
     /* IE9 Compat Modes */
     src: local(''),
-        url('./fonts/pt-sans-v17-latin-italic.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/pt-sans-v17-latin-italic.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('./fonts/pt-sans-v17-latin-italic.woff2') format('woff2'),
+        url('/fonts/pt-sans-v17-latin-italic.woff2') format('woff2'),
         /* Super Modern Browsers */
-        url('./fonts/pt-sans-v17-latin-italic.woff') format('woff'),
+        url('/fonts/pt-sans-v17-latin-italic.woff') format('woff'),
         /* Modern Browsers */
-        url('./fonts/pt-sans-v17-latin-italic.ttf') format('truetype'),
+        url('/fonts/pt-sans-v17-latin-italic.ttf') format('truetype'),
         /* Safari, Android, iOS */
-        url('./fonts/pt-sans-v17-latin-italic.svg#PTSans') format('svg');
+        url('/fonts/pt-sans-v17-latin-italic.svg#PTSans') format('svg');
     /* Legacy iOS */
 }

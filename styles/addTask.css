@@ -80,17 +80,17 @@ input {
 @keyframes flashIn {
     from {
         background-color: white;
-        color: #1E3190;
+        color: #212b5e;
     }
 
     to {
-        background-color: #1E3190;
+        background-color: #212b5e;
         color: white;
     }
 }
 
 .button-add:hover {
-    background-color: #1E3190;
+    background-color: #212b5e;
     color: white;
 }
 
@@ -112,13 +112,13 @@ input {
 }
 
 .button-cancel:hover {
-    background-color: #1E3190;
+    background-color: #212b5e;
     color: white;
 }
 
 .button-create-task {
     border: 0;
-    background-color: #1E3190;
+    background-color: #212b5e;
     color: white;
     border-radius: 5px;
     height: 50px;
@@ -126,7 +126,7 @@ input {
 }
 
 .button-create-task:hover {
-    background-color: blue;
+    background-color: rgb(3, 3, 164);
 }
 
 .buttons {

@@ -35,7 +35,7 @@ input {
 }
 
 .welcome-card-left-container {
-    background-color: #1E3190;
+    background-color: #212b5e;
     border-radius: 10px 0 0 10px;
     width: 22%;
     display: flex;
@@ -84,7 +84,7 @@ input {
     height: 30px;
 }
 
-#wrong-login-data-container, #wrong-data-container {
+#wrong-login-data-container, #wrong-data-container, .testing {
     font-size: 10px !important;
     padding-left: 70px;
     font-style: italic;
@@ -104,7 +104,7 @@ input {
 
 .welcome-card-right-container button {
     border: 0;
-    background-color: #1E3190;
+    background-color: #212b5e;
     color: white;
     border-radius: 5px !important;
     height: 30px;
@@ -126,7 +126,11 @@ input {
 
 .method-toggle {
     background-color: #B01616 !important;
-    margin-right: 28px !important;
+    margin-right: 16px !important;
+}
+
+.guest {
+    margin-right: 16px !important;
 }
 
 @media (max-width:582px) {
@@ -175,5 +179,16 @@ input {
     #signup-card h2 {
         font-size: 15px;
         margin-left: 0px;
+    }
+
+    .width75 {
+        margin-right: 16px !important;
+    }
+    .guest {
+        margin-right: 8px !important;
+    }
+
+    .method-toggle {
+        margin-right: 8px !important;
     }
 }
